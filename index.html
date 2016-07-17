@@ -265,7 +265,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/17/codeblocks添加已存在的工程/">codeblocks添加已存在的工程</a>
+      <a class="article-title" href="/2016/07/17/codeblocks添加已存在的工程/">使用Codeblocks添加已存在的工程</a>
     </h1>
   
 
@@ -275,8 +275,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>1）“File -&gt; New -&gt; Project”，选择“Empty Project”或者“console application“并创建。<br>2）选中 Project，右键，选择“Add files”，将 c/cpp 和 head files 加入工程。<br>3）选中 Project，右键，选择“Properties”，“Project settings”选项卡中的“Makefile”填入Makefile 文件名，并勾选“This is a custom Makefile”。<br>4）选中 Project，右键，选择“Build options”，删除“”Make” command”选项卡中所有的“$target”。</p>
-<p>5）修改已有的Makefile，使输出路径为codeblocks默认路径，否则会一直提示你没有build</p>
+        <h3 id="使用原工程自带的Makefile"><a href="#使用原工程自带的Makefile" class="headerlink" title="使用原工程自带的Makefile"></a>使用原工程自带的Makefile</h3><p>1 “File -&gt; New -&gt; Project”，选择“Empty Project”或者“console application“并创建。<br>2 选中 Project，右键，选择“Add Files Recursively”，将整个项目文件夹加入工程。<br>3 选中 Project，右键，选择“Properties”，“Project settings”选项卡中的“Makefile”填入Makefile 文件名，并勾选“This is a custom Makefile”。<br>4 选中 Project，右键，选择“Build options”，删除“”Make” command”选项卡中所有的“$target”。</p>
+<p>5 修改已有的Makefile，使输出路径为codeblocks默认路径，否则会一直提示你没有build。</p>
+<h3 id="使用自动生成的Makefile"><a href="#使用自动生成的Makefile" class="headerlink" title="使用自动生成的Makefile"></a>使用自动生成的Makefile</h3><p>1 “File -&gt; New -&gt; Project”，选择“Empty Project”或者“console application“并创建。<br>2 选中 Project，右键，选择“Add Files Recursively”，将整个项目文件夹加入工程。<br>3 选中 Project，右键，选择“Build options”，进入Linker Settings子目录，将项目所需要的lib库添加进Link libraries中，有时lib库的顺序不对也会影响编译。<br>4 “Build options”-&gt;“Search Directories”-&gt;”Compiler” 添加头文件目录。<br>5 “Build options”-&gt;“Search Directories”-&gt;”Linker” 添加自己的lib文件的目录。</p>
 
       
     </div>
