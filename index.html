@@ -285,9 +285,9 @@
 <h3 id="使用自动生成的Makefile"><a href="#使用自动生成的Makefile" class="headerlink" title="使用自动生成的Makefile"></a>使用自动生成的Makefile</h3><ol>
 <li>“File” -&gt; “New” -&gt; “Project”，选择“Empty Project”或者“console application“并创建。</li>
 <li>选中 Project，右键，选择“Add Files Recursively”，将整个项目文件夹加入工程。</li>
-<li>选中 Project，右键，选择“Build options”，进入Linker Settings子目录，将项目所需要的lib库添加进Link libraries中，有时lib库的顺序不对也会影响编译。</li>
+<li>选中 Project，右键，选择“Build options”，进入Linker Settings子目录，将项目所需要的lib库添加进Link libraries中，有时lib库的顺序不对也会影响编译，会发生“未定义的引用”错误。</li>
 <li>“Build options”-&gt;“Search Directories”-&gt;”Compiler” 添加头文件目录。</li>
-<li>“Build options”-&gt;“Search Directories”-&gt;”Linker” 添加自己的lib文件的目录。</li>
+<li>“Build options”-&gt;“Search Directories”-&gt;”Linker” 添加自己的lib文件的目录，这个也要注意顺序，否则会发生“未定义的引用”错误。</li>
 </ol>
 
       
