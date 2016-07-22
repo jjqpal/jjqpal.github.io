@@ -248,11 +248,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-SecureCRT" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-CodeBlocks" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/22/SecureCRT/" class="article-date">
-      <time datetime="2016-07-22T10:55:46.000Z" itemprop="datePublished">2016-07-22</time>
+      <a href="/2016/07/22/CodeBlocks/" class="article-date">
+      <time datetime="2016-07-22T11:07:52.000Z" itemprop="datePublished">2016-07-22</time>
 </a>
     </div>
   
@@ -265,7 +265,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/22/SecureCRT/">SecureCRT</a>
+      <a class="article-title" href="/2016/07/22/CodeBlocks/">CodeBlocks</a>
     </h1>
   
 
@@ -275,7 +275,20 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="SecureCRT"><a href="#SecureCRT" class="headerlink" title="SecureCRT"></a>SecureCRT</h2><h3 id="Linux下SecureCRT如何延长试用时间"><a href="#Linux下SecureCRT如何延长试用时间" class="headerlink" title="Linux下SecureCRT如何延长试用时间"></a>Linux下SecureCRT如何延长试用时间</h3><p>一般在用户目录下<code>～/.vandyke/SecureCRT/Config</code>会生成一个叫做<code>SecureCRT_eval.lic</code>的文件。这个文件是用来记录试用时间的，删除掉之后SecureCRT就会重新从30天开始计算。</p>
+        <h2 id="CodeBlocks添加已经存在的工程"><a href="#CodeBlocks添加已经存在的工程" class="headerlink" title="CodeBlocks添加已经存在的工程"></a>CodeBlocks添加已经存在的工程</h2><h3 id="使用原工程自带的Makefile"><a href="#使用原工程自带的Makefile" class="headerlink" title="使用原工程自带的Makefile"></a>使用原工程自带的Makefile</h3><ol>
+<li>“File -&gt; New -&gt; Project”，选择“Empty Project”或者“console application“并创建。</li>
+<li>选中 Project，右键，选择“Add Files Recursively”，将整个项目文件夹加入工程。</li>
+<li>选中 Project，右键，选择“Properties”，“Project settings”选项卡中的“Makefile”填入Makefile 文件名，并勾选“This is a custom Makefile”。</li>
+<li>选中 Project，右键，选择“Build options”，删除“”Make” command”选项卡中所有的“$target”。</li>
+<li>修改已有的Makefile，使输出路径为codeblocks默认路径，否则会一直提示你没有build。</li>
+</ol>
+<h3 id="使用自动生成的Makefile"><a href="#使用自动生成的Makefile" class="headerlink" title="使用自动生成的Makefile"></a>使用自动生成的Makefile</h3><ol>
+<li>“File” -&gt; “New” -&gt; “Project”，选择“Empty Project”或者“console application“并创建。</li>
+<li>选中 Project，右键，选择“Add Files Recursively”，将整个项目文件夹加入工程。</li>
+<li>选中 Project，右键，选择“Build options”，进入Linker Settings子目录，将项目所需要的lib库添加进Link libraries中，有时lib库的顺序不对也会影响编译。</li>
+<li>“Build options”-&gt;“Search Directories”-&gt;”Compiler” 添加头文件目录。</li>
+<li>“Build options”-&gt;“Search Directories”-&gt;”Linker” 添加自己的lib文件的目录。</li>
+</ol>
 
       
     </div>
@@ -306,11 +319,11 @@
 
 
   
-    <article id="post-CodeBlocks" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-SecureCRT" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/19/CodeBlocks/" class="article-date">
-      <time datetime="2016-07-19T09:09:08.000Z" itemprop="datePublished">2016-07-19</time>
+      <a href="/2016/07/22/SecureCRT/" class="article-date">
+      <time datetime="2016-07-22T10:55:46.000Z" itemprop="datePublished">2016-07-22</time>
 </a>
     </div>
   
@@ -323,7 +336,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/19/CodeBlocks/">CodeBlocks</a>
+      <a class="article-title" href="/2016/07/22/SecureCRT/">SecureCRT</a>
     </h1>
   
 
@@ -333,20 +346,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="使用原工程自带的Makefile"><a href="#使用原工程自带的Makefile" class="headerlink" title="使用原工程自带的Makefile"></a>使用原工程自带的Makefile</h3><ol>
-<li>“File -&gt; New -&gt; Project”，选择“Empty Project”或者“console application“并创建。</li>
-<li>选中 Project，右键，选择“Add Files Recursively”，将整个项目文件夹加入工程。</li>
-<li>选中 Project，右键，选择“Properties”，“Project settings”选项卡中的“Makefile”填入Makefile 文件名，并勾选“This is a custom Makefile”。</li>
-<li>选中 Project，右键，选择“Build options”，删除“”Make” command”选项卡中所有的“$target”。</li>
-<li>修改已有的Makefile，使输出路径为codeblocks默认路径，否则会一直提示你没有build。</li>
-</ol>
-<h3 id="使用自动生成的Makefile"><a href="#使用自动生成的Makefile" class="headerlink" title="使用自动生成的Makefile"></a>使用自动生成的Makefile</h3><ol>
-<li>“File” -&gt; “New” -&gt; “Project”，选择“Empty Project”或者“console application“并创建。</li>
-<li>选中 Project，右键，选择“Add Files Recursively”，将整个项目文件夹加入工程。</li>
-<li>选中 Project，右键，选择“Build options”，进入Linker Settings子目录，将项目所需要的lib库添加进Link libraries中，有时lib库的顺序不对也会影响编译。</li>
-<li>“Build options”-&gt;“Search Directories”-&gt;”Compiler” 添加头文件目录。</li>
-<li>“Build options”-&gt;“Search Directories”-&gt;”Linker” 添加自己的lib文件的目录。</li>
-</ol>
+        <h2 id="SecureCRT"><a href="#SecureCRT" class="headerlink" title="SecureCRT"></a>SecureCRT</h2><h3 id="Linux下SecureCRT如何延长试用时间"><a href="#Linux下SecureCRT如何延长试用时间" class="headerlink" title="Linux下SecureCRT如何延长试用时间"></a>Linux下SecureCRT如何延长试用时间</h3><p>一般在用户目录下<code>～/.vandyke/SecureCRT/Config</code>会生成一个叫做<code>SecureCRT_eval.lic</code>的文件。这个文件是用来记录试用时间的，删除掉之后SecureCRT就会重新从30天开始计算。</p>
 
       
     </div>
