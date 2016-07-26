@@ -307,14 +307,15 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="CodeBlocks添加已经存在的工程"><a href="#CodeBlocks添加已经存在的工程" class="headerlink" title="CodeBlocks添加已经存在的工程"></a>CodeBlocks添加已经存在的工程</h2><h3 id="使用原工程自带的Makefile"><a href="#使用原工程自带的Makefile" class="headerlink" title="使用原工程自带的Makefile"></a>使用原工程自带的Makefile</h3><ol>
+        <h3 id="修改控制台程序所使用的终端"><a href="#修改控制台程序所使用的终端" class="headerlink" title="修改控制台程序所使用的终端"></a>修改控制台程序所使用的终端</h3><p>　　修改“Settings” -&gt; “Environment settings” 中“Terminal to launch console programs”的内容:<br>　　Gnome终端:<code>gnome-terminal -t $TITLE -x</code><br>　　XTerm终端:<code>xterm -t $TITLE -e</code></p>
+<h3 id="添加已经存在的工程"><a href="#添加已经存在的工程" class="headerlink" title="添加已经存在的工程"></a>添加已经存在的工程</h3><h4 id="使用原工程自带的Makefile"><a href="#使用原工程自带的Makefile" class="headerlink" title="使用原工程自带的Makefile"></a>使用原工程自带的Makefile</h4><ol>
 <li>“File -&gt; New -&gt; Project”，选择“Empty Project”或者“console application“并创建。</li>
 <li>选中 Project，右键，选择“Add Files Recursively”，将整个项目文件夹加入工程。</li>
 <li>选中 Project，右键，选择“Properties”，“Project settings”选项卡中的“Makefile”填入Makefile 文件名，并勾选“This is a custom Makefile”。</li>
 <li>选中 Project，右键，选择“Build options”，删除“”Make” command”选项卡中所有的“$target”。</li>
 <li>修改已有的Makefile，使输出路径为codeblocks默认路径，否则会一直提示你没有build。</li>
 </ol>
-<h3 id="使用自动生成的Makefile"><a href="#使用自动生成的Makefile" class="headerlink" title="使用自动生成的Makefile"></a>使用自动生成的Makefile</h3><ol>
+<h4 id="使用自动生成的Makefile"><a href="#使用自动生成的Makefile" class="headerlink" title="使用自动生成的Makefile"></a>使用自动生成的Makefile</h4><ol>
 <li>“File” -&gt; “New” -&gt; “Project”，选择“Empty Project”或者“console application“并创建。</li>
 <li>选中 Project，右键，选择“Add Files Recursively”，将整个项目文件夹加入工程。</li>
 <li>选中 Project，右键，选择“Build options”，进入Linker Settings子目录，将项目所需要的lib库添加进Link libraries中，有时lib库的顺序不对也会影响编译，会发生“未定义的引用”错误。</li>
