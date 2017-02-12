@@ -139,7 +139,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/开发工具/" style="font-size: 20px;">开发工具</a> <a href="/tags/框架/" style="font-size: 10px;">框架</a>
+                        <a href="/tags/刷题/" style="font-size: 10px;">刷题</a> <a href="/tags/开发工具/" style="font-size: 20px;">开发工具</a> <a href="/tags/框架/" style="font-size: 10px;">框架</a>
                     </div>
                 </section>
                 
@@ -214,6 +214,64 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-quick-sort" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/12/quick-sort/" class="article-date">
+      <time datetime="2017-02-12T10:26:24.000Z" itemprop="datePublished">2017-02-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/12/quick-sort/">quick_sort</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><h3 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">void quickSort(int left,int right,int* buf)</div><div class="line">&#123;</div><div class="line">	if (left &gt;= right) return;</div><div class="line"></div><div class="line">	int x = buf[left],i=left,j=right;</div><div class="line">	while (i &lt; j)</div><div class="line">	&#123;</div><div class="line">		while (i &lt; j &amp;&amp; buf[j] &gt; x) --j;</div><div class="line">		if (i &lt; j) buf[i++] = buf[j];</div><div class="line">		while (i &lt; j &amp;&amp; buf[i] &lt; x) ++i;</div><div class="line">		if (i &lt; j) buf[j--] = buf[i];</div><div class="line">	&#125;</div><div class="line">	buf[i] = x;</div><div class="line">	quickSort(left,i - 1, buf);</div><div class="line">	quickSort(i + 1, right, buf);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题/">刷题</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-MySqlpp" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -409,7 +467,7 @@
     <div class="outer">
         <div id="footer-info">
             <div class="footer-left">
-                &copy; 2016 假装没BUG
+                &copy; 2017 假装没BUG
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman

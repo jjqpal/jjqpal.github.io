@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016 | 假装没BUG</title>
+  <title>quick_sort | 假装没BUG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="假装没BUG">
-<meta property="og:url" content="http://jjqblog.pub/archives/2016/index.html">
+  <meta name="description" content="快速排序C++12345678910111213141516void quickSort(int left,int right,int* buf)&amp;#123;	if (left &amp;gt;= right) return;	int x = buf[left],i=left,j=right;	while (i &amp;lt; j)	&amp;#123;		while (i &amp;lt; j &amp;amp;&amp;amp; buf[">
+<meta property="og:type" content="article">
+<meta property="og:title" content="quick_sort">
+<meta property="og:url" content="http://jjqblog.pub/2017/02/12/quick-sort/index.html">
 <meta property="og:site_name" content="假装没BUG">
+<meta property="og:description" content="快速排序C++12345678910111213141516void quickSort(int left,int right,int* buf)&amp;#123;	if (left &amp;gt;= right) return;	int x = buf[left],i=left,j=right;	while (i &amp;lt; j)	&amp;#123;		while (i &amp;lt; j &amp;amp;&amp;amp; buf[">
+<meta property="og:updated_time" content="2017-02-12T10:30:34.296Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="假装没BUG">
+<meta name="twitter:title" content="quick_sort">
+<meta name="twitter:description" content="快速排序C++12345678910111213141516void quickSort(int left,int right,int* buf)&amp;#123;	if (left &amp;gt;= right) return;	int x = buf[left],i=left,j=right;	while (i &amp;lt; j)	&amp;#123;		while (i &amp;lt; j &amp;amp;&amp;amp; buf[">
   
   
     <link rel="icon" href="/img/favicon.png">
@@ -33,8 +37,8 @@
           fancybox: true,
           animate: true,
           isHome: false,
-          isPost: false,
-          isArchive: true,
+          isPost: true,
+          isArchive: false,
           isTag: false,
           isCategory: false,
           open_in_new: false
@@ -210,116 +214,190 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-quick-sort" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2017/02/12/quick-sort/" class="article-date">
+      <time datetime="2017-02-12T10:26:24.000Z" itemprop="datePublished">2017-02-12</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      quick_sort
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题/">刷题</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/07/23/MySqlpp/" class="archive-article-date">
-      <time datetime="2016-07-23T14:00:38.000Z" itemprop="datePublished">07-23</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/23/MySqlpp/">MySql++</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
+    <div class="article-entry" itemprop="articleBody">
+      
           
+        <h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><h3 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">void quickSort(int left,int right,int* buf)</div><div class="line">&#123;</div><div class="line">	if (left &gt;= right) return;</div><div class="line"></div><div class="line">	int x = buf[left],i=left,j=right;</div><div class="line">	while (i &lt; j)</div><div class="line">	&#123;</div><div class="line">		while (i &lt; j &amp;&amp; buf[j] &gt; x) --j;</div><div class="line">		if (i &lt; j) buf[i++] = buf[j];</div><div class="line">		while (i &lt; j &amp;&amp; buf[i] &lt; x) ++i;</div><div class="line">		if (i &lt; j) buf[j--] = buf[i];</div><div class="line">	&#125;</div><div class="line">	buf[i] = x;</div><div class="line">	quickSort(left,i - 1, buf);</div><div class="line">	quickSort(i + 1, right, buf);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/框架/">框架</a></li></ul>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/02/12/quick-sort/">quick_sort</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 假装没BUG 的个人博客">假装没BUG</a></p>
+        <p><span>发布时间:</span>2017年02月12日 - 18时26分</p>
+        <p><span>最后更新:</span>2017年02月12日 - 18时30分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/02/12/quick-sort/" title="quick_sort">http://jjqblog.pub/2017/02/12/quick-sort/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://jjqblog.pub/2017/02/12/quick-sort/　　作者: 假装没BUG" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/23/MySqlpp/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySql++</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/07/22/CodeBlocks/" class="archive-article-date">
-      <time datetime="2016-07-22T11:07:52.000Z" itemprop="datePublished">07-22</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/22/CodeBlocks/">CodeBlocks</a>
-    </h1>
-  
 
-        <div class="article-info info-on-archive">
-          
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#快速排序"><span class="toc-number">1.</span> <span class="toc-text">快速排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#C"><span class="toc-number">1.0.1.</span> <span class="toc-text">C++</span></a></li></ol></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发工具/">开发工具</a></li></ul>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2017/02/12/quick-sort/" data-title="quick_sort" data-url="http://jjqblog.pub/2017/02/12/quick-sort/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2016/07/23/MySqlpp/" title="下一篇: MySql++">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/12/quick-sort/">quick_sort</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/23/MySqlpp/">MySql++</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/CodeBlocks/">CodeBlocks</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/22/SecureCRT/">SecureCRT</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/07/22/SecureCRT/" class="archive-article-date">
-      <time datetime="2016-07-22T10:55:46.000Z" itemprop="datePublished">07-22</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/22/SecureCRT/">SecureCRT</a>
-    </h1>
-  
 
-        <div class="article-info info-on-archive">
-          
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/开发工具/">开发工具</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
@@ -384,17 +462,6 @@
         };
     })
 </script>
-
-    <button class="hide-labels">TAG 开关</button>
-    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js">
-    </script>
-    <script>
-        $(document).ready(function() {
-            $("button").click(function() {
-                $(".article-info").toggle(200);
-            });
-        });
-    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
