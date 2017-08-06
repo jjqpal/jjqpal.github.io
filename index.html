@@ -139,7 +139,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/刷题/" style="font-size: 10px;">刷题</a> <a href="/tags/开发工具/" style="font-size: 20px;">开发工具</a> <a href="/tags/框架/" style="font-size: 10px;">框架</a>
+                        <a href="/tags/刷题/" style="font-size: 20px;">刷题</a> <a href="/tags/开发工具/" style="font-size: 20px;">开发工具</a> <a href="/tags/框架/" style="font-size: 10px;">框架</a>
                     </div>
                 </section>
                 
@@ -214,6 +214,73 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-刷题/Two_Sum" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/08/06/刷题/Two_Sum/" class="article-date">
+      <time datetime="2017-08-06T10:26:24.000Z" itemprop="datePublished">2017-08-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/06/刷题/Two_Sum/">Add Two</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
+<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+<p>Example:</p>
+<blockquote>
+<p>Given nums = [2, 7, 11, 15], target = 9,</p>
+<p>Because nums[0] + nums[1] = 2 + 7 = 9,</p>
+<p>return [0, 1].</p>
+</blockquote>
+<h3 id="暴力枚举"><a href="#暴力枚举" class="headerlink" title="暴力枚举"></a>暴力枚举</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Solution &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; twoSum(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vecResult;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; nums.size(); ++i)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">size_t</span> j = i + <span class="number">1</span> ; j &lt; nums.size(); j++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">if</span> (nums[i] + nums[j] == target)</div><div class="line">				&#123;</div><div class="line">					vecResult.push_back(i);</div><div class="line">					vecResult.push_back(j);</div><div class="line">					<span class="keyword">return</span> vecResult;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> vecResult;</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="哈希"><a href="#哈希" class="headerlink" title="哈希"></a>哈希</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Solution &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; twoSum(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vecResult;</div><div class="line">		<span class="built_in">unordered_map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; mapCopy;</div><div class="line"></div><div class="line">		<span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; nums.size(); ++i)</div><div class="line">		&#123;</div><div class="line">			mapCopy[nums[i]] = i;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; nums.size(); ++i)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">const</span> <span class="keyword">int</span> gap = target - nums[i];</div><div class="line"></div><div class="line">			<span class="keyword">if</span> (mapCopy.find(gap) != mapCopy.end())</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">if</span> (i == mapCopy[gap])</div><div class="line">				&#123;</div><div class="line">					<span class="keyword">continue</span>;</div><div class="line">				&#125;</div><div class="line"></div><div class="line">				vecResult.push_back(i);</div><div class="line">				vecResult.push_back(mapCopy[gap]);</div><div class="line">				<span class="keyword">return</span> vecResult;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> vecResult;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/刷题/">刷题</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-quick-sort" class="article article-type-post" itemscope itemprop="blogPost">
   
