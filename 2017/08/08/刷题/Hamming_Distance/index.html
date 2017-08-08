@@ -3,18 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Add Two Numbers | Code Man</title>
+  <title>Hamming Distance | Code Man</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目描述You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and retu">
+  <meta name="description" content="题目描述The Hamming distance between two integers is the number of positions at which the corresponding bits are different.Given two integers x and y, calculate the Hamming distance.
+Note:
+
+0 ≤ x, y &amp;lt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Add Two Numbers">
-<meta property="og:url" content="http://jjqblog.pub/2017/08/07/刷题/Add-Two-Numbers/index.html">
+<meta property="og:title" content="Hamming Distance">
+<meta property="og:url" content="http://jjqblog.pub/2017/08/08/刷题/Hamming_Distance/index.html">
 <meta property="og:site_name" content="Code Man">
-<meta property="og:description" content="题目描述You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and retu">
-<meta property="og:updated_time" content="2017-08-08T11:55:46.295Z">
+<meta property="og:description" content="题目描述The Hamming distance between two integers is the number of positions at which the corresponding bits are different.Given two integers x and y, calculate the Hamming distance.
+Note:
+
+0 ≤ x, y &amp;lt;">
+<meta property="og:updated_time" content="2017-08-08T13:28:05.212Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Add Two Numbers">
-<meta name="twitter:description" content="题目描述You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and retu">
+<meta name="twitter:title" content="Hamming Distance">
+<meta name="twitter:description" content="题目描述The Hamming distance between two integers is the number of positions at which the corresponding bits are different.Given two integers x and y, calculate the Hamming distance.
+Note:
+
+0 ≤ x, y &amp;lt;">
   
     <link rel="alternative" href="/atom.xml" title="Code Man" type="application/atom+xml">
   
@@ -232,11 +241,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-刷题/Add-Two-Numbers" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-刷题/Hamming_Distance" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/08/07/刷题/Add-Two-Numbers/" class="article-date">
-      <time datetime="2017-08-07T15:17:24.000Z" itemprop="datePublished">2017-08-07</time>
+      <a href="/2017/08/08/刷题/Hamming_Distance/" class="article-date">
+      <time datetime="2017-08-08T13:25:43.000Z" itemprop="datePublished">2017-08-08</time>
 </a>
     </div>
   
@@ -249,7 +258,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Add Two Numbers
+      Hamming Distance
     </h1>
   
 
@@ -266,13 +275,19 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
-<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>The Hamming distance between two integers is the number of positions at which the corresponding bits are different.Given two integers x and y, calculate the Hamming distance.</p>
+<p>Note:</p>
 <blockquote>
-<p>Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</p>
-<p>Output: 7 -&gt; 0 -&gt; 8</p>
+<p>0 ≤ x, y &lt; 231.</p>
 </blockquote>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">* Definition for singly-linked list.</div><div class="line">* struct ListNode &#123;</div><div class="line">*     int val;</div><div class="line">*     ListNode *next;</div><div class="line">*     ListNode(int x) : val(x), next(NULL) &#123;&#125;</div><div class="line">* &#125;;</div><div class="line">*/</div><div class="line"><span class="keyword">class</span> Solution </div><div class="line">&#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">	<span class="function">ListNode* <span class="title">addTwoNumbers</span><span class="params">(ListNode* l1, ListNode* l2)</span></span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span> (!l1 || !l2)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">return</span> <span class="literal">nullptr</span>;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">int</span> nCarryBit = <span class="number">0</span>;</div><div class="line">		ListNode *pl1 = l1, *pl2 = l2;</div><div class="line">		ListNode* pRet = <span class="keyword">new</span> ListNode((pl1-&gt;val + pl2-&gt;val) % <span class="number">10</span>);</div><div class="line">		nCarryBit = (pl1-&gt;val + pl2-&gt;val) / <span class="number">10</span>;</div><div class="line">		ListNode* pReturn = pRet;</div><div class="line"></div><div class="line">		<span class="keyword">for</span> (pl1 = pl1-&gt;next, pl2 = pl2-&gt;next;pl1 != <span class="literal">nullptr</span> &amp;&amp; pl2 != <span class="literal">nullptr</span>; pl1 = pl1-&gt;next,pl2 = pl2-&gt;next)</div><div class="line">		&#123;</div><div class="line">			pReturn-&gt;next = <span class="keyword">new</span> ListNode((pl1-&gt;val + pl2-&gt;val + nCarryBit) % <span class="number">10</span>);</div><div class="line">			pReturn = pReturn-&gt;next;</div><div class="line">			nCarryBit = (pl1-&gt;val + pl2-&gt;val + nCarryBit) / <span class="number">10</span>;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		<span class="keyword">if</span> (!pl1 &amp;&amp; !pl2)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span> (nCarryBit != <span class="number">0</span>)</div><div class="line">			&#123;</div><div class="line">				pReturn-&gt;next = <span class="keyword">new</span> ListNode(nCarryBit);</div><div class="line">				pReturn = pReturn-&gt;next;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span></div><div class="line">		&#123;</div><div class="line">			ListNode *pl3 = pl1 ? pl1 : pl2;</div><div class="line"></div><div class="line">			<span class="keyword">for</span> (;pl3;pl3 = pl3-&gt;next)</div><div class="line">			&#123;</div><div class="line">				pReturn-&gt;next = <span class="keyword">new</span> ListNode((pl3-&gt;val + nCarryBit) % <span class="number">10</span>);</div><div class="line">				pReturn = pReturn-&gt;next;</div><div class="line">				nCarryBit = (pl3-&gt;val + nCarryBit) / <span class="number">10</span>;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span> (nCarryBit != <span class="number">0</span>)</div><div class="line">			&#123;</div><div class="line">				pReturn-&gt;next = <span class="keyword">new</span> ListNode(nCarryBit);</div><div class="line">				pReturn = pReturn-&gt;next;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">return</span> pRet;</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>Example:</p>
+<blockquote>
+<p>Input: x = 1, y = 4</p>
+<p>Output: 2</p>
+<p>Explanation:<br>1   (0 0 0 1)<br>4   (0 1 0 0)<br>       ?   ?</p>
+<p>The above arrows point to positions where the corresponding bits are different.</p>
+</blockquote>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Solution</div><div class="line">&#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">hammingDistance</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> a = x ^ y;</div><div class="line"></div><div class="line">		<span class="keyword">int</span> nAnswer = <span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; ++i)</div><div class="line">		&#123;</div><div class="line">			nAnswer += (a &amp; (<span class="keyword">int</span>)<span class="built_in">pow</span>(<span class="number">2.0f</span>, (<span class="keyword">float</span>)i)) != <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">return</span> nAnswer;</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 
       
       
@@ -328,13 +343,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/08/07/刷题/Add-Two-Numbers/">Add Two Numbers</a></p>
+        <p><span>本文标题:</span><a href="/2017/08/08/刷题/Hamming_Distance/">Hamming Distance</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Code Man 的个人博客">Code Man</a></p>
-        <p><span>发布时间:</span>2017年08月07日 - 23时17分</p>
-        <p><span>最后更新:</span>2017年08月08日 - 19时55分</p>
+        <p><span>发布时间:</span>2017年08月08日 - 21时25分</p>
+        <p><span>最后更新:</span>2017年08月08日 - 21时28分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/08/07/刷题/Add-Two-Numbers/" title="Add Two Numbers">http://jjqblog.pub/2017/08/07/刷题/Add-Two-Numbers/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://jjqblog.pub/2017/08/07/刷题/Add-Two-Numbers/　　作者: Code Man" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/08/08/刷题/Hamming_Distance/" title="Hamming Distance">http://jjqblog.pub/2017/08/08/刷题/Hamming_Distance/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://jjqblog.pub/2017/08/08/刷题/Hamming_Distance/　　作者: Code Man" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -347,18 +362,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/08/08/刷题/Hamming_Distance/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Hamming Distance
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/08/06/刷题/Two_Sum/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Add Two</div>
+    <a href="/2017/08/07/刷题/Add-Two-Numbers/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Add Two Numbers</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -435,13 +441,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/08/08/刷题/Hamming_Distance/" title="上一篇: Hamming Distance">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/08/06/刷题/Two_Sum/" title="下一篇: Add Two">
+            <a href="/2017/08/07/刷题/Add-Two-Numbers/" title="下一篇: Add Two Numbers">
                 <i class="fa fa-angle-right"></i>
             </a>
         

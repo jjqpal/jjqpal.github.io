@@ -233,6 +233,73 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-刷题/Hamming_Distance" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/08/08/刷题/Hamming_Distance/" class="article-date">
+      <time datetime="2017-08-08T13:25:43.000Z" itemprop="datePublished">2017-08-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/08/刷题/Hamming_Distance/">Hamming Distance</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>The Hamming distance between two integers is the number of positions at which the corresponding bits are different.Given two integers x and y, calculate the Hamming distance.</p>
+<p>Note:</p>
+<blockquote>
+<p>0 ≤ x, y &lt; 231.</p>
+</blockquote>
+<p>Example:</p>
+<blockquote>
+<p>Input: x = 1, y = 4</p>
+<p>Output: 2</p>
+<p>Explanation:<br>1   (0 0 0 1)<br>4   (0 1 0 0)<br>       ?   ?</p>
+<p>The above arrows point to positions where the corresponding bits are different.</p>
+</blockquote>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Solution</div><div class="line">&#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">hammingDistance</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> a = x ^ y;</div><div class="line"></div><div class="line">		<span class="keyword">int</span> nAnswer = <span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; ++i)</div><div class="line">		&#123;</div><div class="line">			nAnswer += (a &amp; (<span class="keyword">int</span>)<span class="built_in">pow</span>(<span class="number">2.0f</span>, (<span class="keyword">float</span>)i)) != <span class="number">0</span> ? <span class="number">1</span> : <span class="number">0</span>;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">return</span> nAnswer;</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-刷题/Add-Two-Numbers" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
