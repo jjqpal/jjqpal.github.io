@@ -3108,7 +3108,7 @@ a.gitment-editor-footer-tip:hover {
   padding: 1px 3px;
   margin: 0 3px;
   color: #999;
-  background: #002b36;
+  background: rgba(217,83,79,0.45);
   border: 1px dashed #ccc;
   -webkit-border-radius: 3px;
   border-radius: 3px;
@@ -3205,7 +3205,7 @@ a.gitment-editor-footer-tip:hover {
 }
 .article-entry code {
   color: #999;
-  background: #002b36;
+  background: rgba(217,83,79,0.45);
   padding: 1px 3px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -3720,7 +3720,7 @@ a.gitment-editor-footer-tip:hover {
   box-sizing: border-box;
 }
 .article-entry code {
-  background: #002b36;
+  background: rgba(217,83,79,0.45);
   padding: 0 0.3em;
   border: none;
 }
@@ -3744,7 +3744,7 @@ a.gitment-editor-footer-tip:hover {
   border-radius: 5px;
   font-family: Consolas, "Courier New", Courier;
   text-shadow: none;
-  background-color: #002b36;
+  background-color: rgba(217,83,79,0.45);
   word-wrap: break-word;
   white-space: pre;
 }
